@@ -1,0 +1,123 @@
+@import '../../global.scss';
+
+.intro{
+    background-color: #14213d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-clip-path: polygon(90vh);
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    // .left{
+    //     flex: .5;
+    //     .imgContainer{
+    //         overflow: hidden;
+    //         width: 650px;
+    //         height: 650px;
+    //         background-color: crimson;
+    //         border-radius: 50%;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: flex-end;
+    //         float: right;
+
+    //         @include mobile{
+    //             align-items: flex-start;
+    //         }
+
+
+    //         img{
+    //             height: 90%;
+
+    //             @include mobile{
+    //                 height: 50%;
+
+    //             }
+    //         }
+    //     }
+    // }
+    .right{
+        // flex:.5;
+        
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include mobile{
+                padding-left: 0px;
+                align-items: center;
+            }
+            
+            h1{
+                font-size: 60px;
+                margin: 10px 0;
+                color: #e5e5e5;
+
+                @include mobile{
+                    font-size: 40px;
+                }
+
+            }
+
+            h2{
+                font-size: 35px;
+                color: #ffffff;
+                @include mobile{
+                    font-size: 20px;
+                }
+            }
+
+            h3{
+                font-size: 30px;
+                color: #ffffff;
+                @include mobile{
+                    font-size: 20px;
+                }
+
+                span{
+                    font-size: inherit;
+                    color:#fca311;
+                }
+                .ityped-cursor{
+                    animation: blink 1s infinite;
+                }
+
+                @keyframes blink {
+                    100%{
+                        opacity: 0;
+                    }
+                    50%{
+                        opacity: 1;
+                    }
+                    
+                }
+            }
+        }
+        a{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+
+            .arrow{
+                color: #fca311;
+                font-size: 40px;
+                animation: arrowBlink 2s infinite;
+            }
+
+            @keyframes arrowBlink {
+                100%{
+                    opacity: 0;
+                    
+                }
+            }
+        }
+    }
+}
